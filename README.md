@@ -1,4 +1,4 @@
-[中文](https://github.com/chess-brain/chess-brain.github.io/blob/main/README.md)[English](https://github.com/chess-brain/chess-brain.github.io/blob/main/README-en.md)[日本語](https://github.com/chess-brain/chess-brain.github.io/blob/main/README-ja.md)
+[中文](https://github.com/chess-brain/chess-brain.github.io/blob/main/README.md)  [English](https://github.com/chess-brain/chess-brain.github.io/blob/main/README-en.md)  [日本語](https://github.com/chess-brain/chess-brain.github.io/blob/main/README-ja.md)
 # 欢迎访问象棋脑社区🎉
 代码借鉴自 https://github.com/kejicx/kejicx.github.io/
 
