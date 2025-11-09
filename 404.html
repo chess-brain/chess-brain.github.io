@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无法访问此网站</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: white;
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+        }
+
+        .error-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 24px;
+            color: #dc3545;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .error-message {
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .error-code {
+            color: #666;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            border: 1px solid transparent;
+        }
+
+        .btn-detail {
+            background: white;
+            border-color: #ddd;
+            color: #333;
+        }
+
+        .btn-reload {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-reload:hover {
+            background: #0056b3;
+        }
+
+        .error-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(0,0,0,0.05);
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .error-details.active {
+            max-height: 500px; 
+        }
+
+        .error-details-content {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" 
+                  stroke-width="1.5"
+                  stroke-linecap="round"/>
+        </svg>
+        
+        <h1>无法访问此网站</h1>
+        
+        <p class="error-message">
+            请试试以下办法：
+            <ul>
+                <li>检查电脑配置</li>
+                <li>修复电脑</li>
+                <li>毁掉当前电脑，并买一个新电脑</li>
+            </ul>
+        </p>
+
+        <!-- COMPUTER_TOO_OLD -->
+        <div class="error-code">COMPUTER_NOT_SUPPORT</div>
+
+        <div class="button-group">
+            <button class="btn btn-detail" onclick="toggleDetails()">详情</button>
+            <button class="btn btn-reload" onclick="window.location.reload()">重新加载</button>
+        </div>
+
+        <div class="error-details">
+            <div class="error-details-content">
+                <h3>错误详情：</h3>
+                <p><strong>错误代码：</strong>COMPUTER_NOT_SUPPORT</p>
+                <p><strong>可能原因：</strong>
+                    <ul>
+                        <li>电脑配置错误</li>
+                        <li>电脑有问题</li>
+                        <li>电脑太旧</li>
+                    </ul>
+                </p>
+                <p><strong>建议操作：</strong>
+                    <ol>
+                        <li>检查电脑配置</li>
+                        <li>修复电脑</li>
+                        <li>毁掉当前电脑，并买一个新电脑</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDetails() {
+            const details = document.querySelector('.error-details');
+            const btn = document.querySelector('.btn-detail');
+            
+            details.classList.toggle('active');
+            btn.textContent = details.classList.contains('active') ? '隐藏详情' : '详情';
+            
+            if(details.classList.contains('active')) {
+                details.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function isMobileByUserAgent() {
+            const mobileKeywords = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+            return mobileKeywords.test(navigator.userAgent);
+        }
+        if(isMobileByUserAgent()) document.body.outerHTML=document.body.outerHTML.replace(/电脑/gi, "手机");
+    </script>
+</body>
+</html>
+​
