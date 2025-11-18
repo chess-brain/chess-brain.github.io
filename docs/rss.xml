@@ -1,2 +1,129 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://chess-brain.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://chess-brain.github.io</link></image><lastBuildDate>Tue, 18 Nov 2025 11:25:26 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>test1</title><link>https://chess-brain.github.io/post/test1.html</link><description>test1。</description><guid isPermaLink="true">https://chess-brain.github.io/post/test1.html</guid><pubDate>Tue, 18 Nov 2025 11:24:56 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://chess-brain.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://chess-brain.github.io</link></image><lastBuildDate>Tue, 18 Nov 2025 13:49:04 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>我的一些资料</title><link>https://chess-brain.github.io/post/wo-de-yi-xie-zi-liao.html</link><description># 埃筛
+```cpp
+#include&lt;bits/stdc++.h&gt;
+#define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
+using namespace std;
+bool is_it_a_prime[100000001];
+int main(){
+    int n;
+    cin &gt;&gt; n;
+    for(int i = 2; i * i &lt;= n; ++i){
+        if(!is_it_a_prime[i]){
+            for(int j = i * i; j &lt;= n; j += i){
+              is_it_a_prime[j] = 1;
+            }
+        }
+    }
+    return 0;
+}
+```
+# 欧筛
+```cpp
+#include&lt;bits/stdc++.h&gt;
+#define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
+using namespace std;
+bool is_it_a_prime[100000001];
+int prime[60000001];
+int main(){
+    int n, l = 0;
+    cin &gt;&gt; n;
+    for(int i = 2; i &lt;= n; ++i){
+        if(!is_it_a_prime[i]) prime[++l] = i;
+    for(int j = 1; j &lt;= l; j++){
+         if(i * prime[j] &gt; n) break;
+         is_it_a_prime[i * prime[j]] = 1;
+         if(i % prime[j] == 0) break;
+    }
+    return 0;
+}
+```
+# 快速幂
+## 递归
+```cpp
+long long fast_power(long long a,long long b){
+    if(b == 0) return 1;
+    half = fast_power(a, b / 2);
+    if(b % 2 == 0) return half * half
+    else return half * half * a;
+}
+```
+## 迭代
+```cpp
+long long fast_power(long long a,long long b){
+    ans = 1;
+    base = a;
+    exponent = b;
+    while(exponent &gt; 0){
+        if(exponent % 2 == 1) ans = ans * a;
+        base *= base;
+        exponent /= 2;
+    return ans;
+}
+```
+# 排序
+## 直接排序
+```cpp
+sort(arr, arr + length)
+```
+## 归并排序
+```cpp
+#include&lt;bits/stdc++.h&gt; 
+#define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
+using namespace std;
+long long arr[1000007] = {0, 6, 3, 7, 4, 5, 8, 9, 2};
+long long brr[1000007];
+void mergeSort(long long left, long long right){
+	if(left == right) return;
+	long long mid = left + (right - left) / 2;
+	mergeSort(left, mid);
+	mergeSort(mid + 1, right);
+	long long i = left, j = mid + 1, tmp = left;
+	while(i &lt;= mid &amp;&amp; j &lt;= right) brr[tmp++] = (arr[i] &lt; arr[j]) ? arr[i++] : arr[j++];
+	if(i &lt;= mid){
+		while(i &lt;= mid) brr[tmp++] = arr[i++];
+	}else{
+		while(j &lt;= right) brr[tmp++] = arr[j++];
+	}
+	for(int _ = left; _ &lt;= right; ++_){
+		arr[_] = brr[_];
+	}
+}
+
+int main(){
+	int len = 8;
+	mergeSort(1, len);
+	for(int i = 1; i &lt;= len; ++i) cout &lt;&lt; arr[i] &lt;&lt; ' ';
+	return 0;
+}
+```
+## 快速排序
+```cpp
+#include&lt;bits/stdc++.h&gt;
+#define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
+using namespace std;
+int arr[1000007] = {8, 2, 4, 9, 6, 3, 5, 2, 7, 0};
+void QuickSort(int left, int right){
+    if(left &gt;= right) return;
+    int base = arr[left + (right - left) / 2];
+    int i, j;
+    for(i = left, j = right; i &lt;= j;){
+        for(; arr[i] &lt; base;) i++;
+        for(; arr[j] &gt; base;) j--;
+        if(i &lt;= j) swap(arr[i++], arr[j--]);
+    }
+    if(left &lt; j) QuickSort(left, j);
+    if(i &lt; right) QuickSort(i, right);
+}
+int main(){
+    int N;
+    cin &gt;&gt; N;
+    for(int i = 0; i &lt; N; i++) cin &gt;&gt; arr[i];
+    QuickSort(0, N - 1);
+    for(int i = 0; i &lt; N; i++) cout &lt;&lt; arr[i] &lt;&lt; ' ';
+    return 0;
+}
+```
+# 贪心算法
+## 概述
+==**贪心算法**==（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。</description><guid isPermaLink="true">https://chess-brain.github.io/post/wo-de-yi-xie-zi-liao.html</guid><pubDate>Tue, 18 Nov 2025 13:48:36 +0000</pubDate></item><item><title>test1</title><link>https://chess-brain.github.io/post/test1.html</link><description>test1。</description><guid isPermaLink="true">https://chess-brain.github.io/post/test1.html</guid><pubDate>Tue, 18 Nov 2025 11:24:56 +0000</pubDate></item></channel></rss>
