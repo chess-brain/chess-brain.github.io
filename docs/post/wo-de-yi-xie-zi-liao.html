@@ -72,12 +72,12 @@ long long fast_power(long long a,long long b){
     return ans;
 }
 ```
-# 排序
-## 直接排序
+## 排序
+### 直接排序
 ```cpp
 sort(arr, arr + length)
 ```
-## 归并排序
+### 归并排序
 ```cpp
 #include<bits/stdc++.h> 
 #define DEBUG(var) cout << '[DEBUG] ' << #var << ' = ' << var << endl;
@@ -108,7 +108,7 @@ int main(){
 	return 0;
 }
 ```
-## 快速排序
+### 快速排序
 ```cpp
 #include<bits/stdc++.h>
 #define DEBUG(var) cout << '[DEBUG] ' << #var << ' = ' << var << endl;
@@ -135,9 +135,9 @@ int main(){
     return 0;
 }
 ```
-# 贪心算法
+## 贪心算法
 ## 概述
-==**贪心算法**==（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。">
+**贪心算法**（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。">
 <meta property="og:title" content="我的一些资料">
 <meta property="og:description" content="# 埃筛
 ```cpp
@@ -201,12 +201,12 @@ long long fast_power(long long a,long long b){
     return ans;
 }
 ```
-# 排序
-## 直接排序
+## 排序
+### 直接排序
 ```cpp
 sort(arr, arr + length)
 ```
-## 归并排序
+### 归并排序
 ```cpp
 #include<bits/stdc++.h> 
 #define DEBUG(var) cout << '[DEBUG] ' << #var << ' = ' << var << endl;
@@ -237,7 +237,7 @@ int main(){
 	return 0;
 }
 ```
-## 快速排序
+### 快速排序
 ```cpp
 #include<bits/stdc++.h>
 #define DEBUG(var) cout << '[DEBUG] ' << #var << ' = ' << var << endl;
@@ -264,9 +264,9 @@ int main(){
     return 0;
 }
 ```
-# 贪心算法
+## 贪心算法
 ## 概述
-==**贪心算法**==（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。">
+**贪心算法**（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://chess-brain.github.io/post/wo-de-yi-xie-zi-liao.html">
 <meta property="og:image" content="https://chess-brain.github.io/about/static/img/favicon.ico">
@@ -391,10 +391,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         exponent /= <span class="pl-c1">2</span>;
     <span class="pl-k">return</span> ans;
 }</pre></div>
-<h1>排序</h1>
-<h2>直接排序</h2>
+<h2>排序</h2>
+<h3>直接排序</h3>
 <div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-en">sort</span>(arr, arr + length)</pre></div>
-<h2>归并排序</h2>
+<h3>归并排序</h3>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span> 
 #<span class="pl-k">define</span> <span class="pl-en">DEBUG</span>(<span class="pl-v">var</span>) cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>[DEBUG] <span class="pl-pds">"</span></span> &lt;&lt; #var &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> = <span class="pl-pds">"</span></span> &lt;&lt; var &lt;&lt; endl;
 <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
@@ -423,7 +423,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 	<span class="pl-k">for</span>(<span class="pl-k">int</span> i = <span class="pl-c1">1</span>; i &lt;= len; ++i) cout &lt;&lt; arr[i] &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div>
-<h2>快速排序</h2>
+<h3>快速排序</h3>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
 #<span class="pl-k">define</span> <span class="pl-en">DEBUG</span>(<span class="pl-v">var</span>) cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>[DEBUG] <span class="pl-pds">"</span></span> &lt;&lt; #var &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> = <span class="pl-pds">"</span></span> &lt;&lt; var &lt;&lt; endl;
 <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
@@ -448,9 +448,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">for</span>(<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; N; i++) cout &lt;&lt; arr[i] &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
     <span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div>
-<h1>贪心算法</h1>
+<h2>贪心算法</h2>
 <h2>概述</h2>
-<p>==<strong>贪心算法</strong>==（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在<strong>当前看来</strong>是最好的选择。也就是说，不<strong>从整体最优上</strong>加以考虑，算法得到的是在某种意义上的<strong>局部最优解</strong>。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择。</p>
+<p><strong>贪心算法</strong>（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在<strong>当前看来</strong>是最好的选择。也就是说，不<strong>从整体最优上</strong>加以考虑，算法得到的是在某种意义上的<strong>局部最优解</strong>。贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择。</p>
 <h2>二分</h2>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
 #<span class="pl-k">define</span> <span class="pl-en">DEBUG</span>(<span class="pl-v">var</span>) cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>[DEBUG] <span class="pl-pds">"</span></span> &lt;&lt; #var &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> = <span class="pl-pds">"</span></span> &lt;&lt; var &lt;&lt; endl;
@@ -473,6 +473,69 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">for</span>(<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; amt; ++i) cin &gt;&gt; arr[i];
     cin &gt;&gt; num;
     cout &lt;&lt; (<span class="pl-c1">binsrc</span>(num, <span class="pl-c1">0</span>, amt - <span class="pl-c1">1</span>)) &lt;&lt; endl;
+    <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h2>数据结构们</h2>
+<h3>deque</h3>
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">define</span> <span class="pl-en">DEBUG</span>(<span class="pl-v">var</span>) cout&lt;&lt;<span class="pl-s"><span class="pl-pds">"</span>[DEBUG]<span class="pl-pds">"</span></span>&lt;&lt;#var&lt;&lt;<span class="pl-s"><span class="pl-pds">"</span>=<span class="pl-pds">"</span></span>&lt;&lt;var&lt;&lt;endl;
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-c"><span class="pl-c">//</span>双端队列模拟</span>
+
+<span class="pl-c"><span class="pl-c">//</span>基本数据</span>
+<span class="pl-k">int</span> MAX_N = <span class="pl-c1">2e5</span>+<span class="pl-c1">5</span>;
+<span class="pl-k">int</span> deque1[MAX_N];
+<span class="pl-k">int</span> head = MAX_N / <span class="pl-c1">2</span>, tail = MAX_N / <span class="pl-c1">2</span>; <span class="pl-c"><span class="pl-c">//</span>队头、队尾, 使用中间值防止越界</span>
+<span class="pl-k">int</span> front = <span class="pl-c1">1</span>, back = <span class="pl-c1">0</span>;
+
+<span class="pl-c"><span class="pl-c">//</span>判空</span>
+<span class="pl-k">bool</span> <span class="pl-en">empty</span>(){<span class="pl-k">return</span> head == tail;}
+
+<span class="pl-k">void</span> <span class="pl-en">push</span>(<span class="pl-k">int</span> x, <span class="pl-k">bool</span> dir){ <span class="pl-c"><span class="pl-c">//</span>dir为false时尾插，否则头插</span>
+    <span class="pl-k">if</span>(dir){
+        deque1[--head] = x;
+    }<span class="pl-k">else</span>{
+        deque1[++tail] = x;
+    }
+}
+<span class="pl-k">int</span> <span class="pl-en">find</span>(<span class="pl-k">bool</span> dir){ <span class="pl-c"><span class="pl-c">//</span>dir为false时尾查，否则头查</span>
+    <span class="pl-k">if</span>(dir){
+        <span class="pl-k">return</span> deque1[head];
+    }<span class="pl-k">else</span>{
+        <span class="pl-k">return</span> deque1[tail];
+    }
+}
+<span class="pl-k">int</span> <span class="pl-en">pop</span>(<span class="pl-k">bool</span> dir){ <span class="pl-c"><span class="pl-c">//</span>dir为false时尾删，否则头删</span>
+    <span class="pl-k">if</span>(dir){
+        <span class="pl-k">if</span>(<span class="pl-c1">empty</span>()) <span class="pl-k">return</span> -<span class="pl-c1">1</span>;
+        <span class="pl-k">return</span> deque1[head++];
+    }<span class="pl-k">else</span>{
+        <span class="pl-k">if</span>(<span class="pl-c1">empty</span>()) <span class="pl-k">return</span> -<span class="pl-c1">1</span>;
+        <span class="pl-k">return</span> deque1[--tail];
+    }
+}
+<span class="pl-k">void</span> <span class="pl-en">clear</span>(){
+	head = tail;
+}
+<span class="pl-k">int</span> <span class="pl-en">count</span>(){
+	<span class="pl-k">return</span> tail - head;
+}
+
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-c"><span class="pl-c">//</span>10 5 10 3 7 3 -1</span>
+    <span class="pl-c1">push</span>(<span class="pl-c1">3</span>, back);
+    <span class="pl-c1">push</span>(<span class="pl-c1">5</span>, back);
+    <span class="pl-c1">push</span>(<span class="pl-c1">10</span>, front);
+    cout &lt;&lt; <span class="pl-c1">find</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">find</span>(back) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">pop</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">find</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    <span class="pl-c1">push</span>(<span class="pl-c1">7</span>, back);
+    cout &lt;&lt; <span class="pl-c1">pop</span>(back) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">pop</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">pop</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
+    cout &lt;&lt; <span class="pl-c1">pop</span>(front) &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
     <span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>

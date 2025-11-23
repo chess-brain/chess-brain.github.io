@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>象棋脑博客</title><link>https://chess-brain.github.io</link><description>象棋脑社区的博客官网</description><copyright>象棋脑博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://chess-brain.github.io/about/static/img/favicon.ico</url><title>avatar</title><link>https://chess-brain.github.io</link></image><lastBuildDate>Wed, 19 Nov 2025 16:26:39 +0000</lastBuildDate><managingEditor>象棋脑博客</managingEditor><ttl>60</ttl><webMaster>象棋脑博客</webMaster><item><title>test2</title><link>https://chess-brain.github.io/post/test2.html</link><description>&lt;details&gt;&lt;summary&gt;项目&lt;/summary&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>象棋脑博客</title><link>https://chess-brain.github.io</link><description>象棋脑社区的博客官网</description><copyright>象棋脑博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://chess-brain.github.io/about/static/img/favicon.ico</url><title>avatar</title><link>https://chess-brain.github.io</link></image><lastBuildDate>Sun, 23 Nov 2025 08:41:26 +0000</lastBuildDate><managingEditor>象棋脑博客</managingEditor><ttl>60</ttl><webMaster>象棋脑博客</webMaster><item><title>test2</title><link>https://chess-brain.github.io/post/test2.html</link><description>&lt;details&gt;&lt;summary&gt;项目&lt;/summary&gt;
 &lt;p&gt;
 1
 2
@@ -71,12 +71,12 @@ long long fast_power(long long a,long long b){
     return ans;
 }
 ```
-# 排序
-## 直接排序
+## 排序
+### 直接排序
 ```cpp
 sort(arr, arr + length)
 ```
-## 归并排序
+### 归并排序
 ```cpp
 #include&lt;bits/stdc++.h&gt; 
 #define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
@@ -107,7 +107,7 @@ int main(){
 	return 0;
 }
 ```
-## 快速排序
+### 快速排序
 ```cpp
 #include&lt;bits/stdc++.h&gt;
 #define DEBUG(var) cout &lt;&lt; '[DEBUG] ' &lt;&lt; #var &lt;&lt; ' = ' &lt;&lt; var &lt;&lt; endl;
@@ -134,6 +134,6 @@ int main(){
     return 0;
 }
 ```
-# 贪心算法
+## 贪心算法
 ## 概述
-==**贪心算法**==（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。</description><guid isPermaLink="true">https://chess-brain.github.io/post/wo-de-yi-xie-zi-liao.html</guid><pubDate>Tue, 18 Nov 2025 13:48:36 +0000</pubDate></item><item><title>test1</title><link>https://chess-brain.github.io/post/test1.html</link><description>test1。</description><guid isPermaLink="true">https://chess-brain.github.io/post/test1.html</guid><pubDate>Tue, 18 Nov 2025 11:24:56 +0000</pubDate></item></channel></rss>
+**贪心算法**（greedy algorithm，又称贪婪算法）是指，在对问题求解时，总是做出在**当前看来**是最好的选择。</description><guid isPermaLink="true">https://chess-brain.github.io/post/wo-de-yi-xie-zi-liao.html</guid><pubDate>Tue, 18 Nov 2025 13:48:36 +0000</pubDate></item><item><title>test1</title><link>https://chess-brain.github.io/post/test1.html</link><description>test1。</description><guid isPermaLink="true">https://chess-brain.github.io/post/test1.html</guid><pubDate>Tue, 18 Nov 2025 11:24:56 +0000</pubDate></item></channel></rss>
