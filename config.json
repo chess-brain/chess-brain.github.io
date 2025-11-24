@@ -3,7 +3,7 @@
     "subTitle":"象棋脑社区的博客官网",
     "avatarUrl":"https://chess-brain.github.io/about/static/img/favicon.ico",
     "startSite":"11/16/2025",
-    "singlePage":["link","about"],
+    "singlePage":["link","about","music","blog1","write"],
     "email":"3690985693@qq.com",
     "onePageListNum":15,
     "commentLabelColor":"#006b75",
