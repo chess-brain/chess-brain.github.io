@@ -2,9 +2,30 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>象棋脑官网</title>
-    <link rel="icon" href="https://raw.bgithub.xyz/chess-brain/chess-brain.github.io/refs/heads/main/king.png" type="image/webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=1">
+    <title>象棋脑工作室官网 | 创意编程与科技创新</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CCW共创世界编程社区象棋脑工作室，致力于开发Scratch作品和Scratch积木扩展的小型计算机、编程工作室。">
+    <meta name="keywords" content="象棋脑,象棋脑工作室,象棋脑官网,象棋脑工作室官网,共创世界象棋脑工作室,共创世界象棋脑官网,共创世界象棋脑工作室官网,共创世界编程社区,ccw,ccw共创世界,ccw象棋脑工作室,ccw工作室">
+    <meta name="author" content="象棋脑工作室">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="象棋脑工作室工作室官网">
+    <meta property="og:description" content="CCW共创世界编程社区象棋脑工作室工作室，致力于开发Scratch作品和Scratch积木扩展的小型计算机、编程工作室。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chess-brain.github.io">
+    <meta property="og:image" content="https://chess-brain.github.io/king.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="象棋脑工作室工作室官网">
+    <meta name="twitter:description" content="CCW共创世界编程社区象棋脑工作室工作室，致力于开发Scratch作品和Scratch积木扩展的小型计算机、编程工作室。">
+    <meta name="twitter:image" content="https://chess-brain.github.io/king.png">
+    
+    <link rel="icon" href="https://chess-brain.github.io/king.png" type="image/webp">
+    
     <style>
         * {
             margin: 0;
@@ -14,10 +35,23 @@
         }
         body {
             min-height: 100vh;
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 30%, #a5d296 70%, #5ac05c 100%);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
             color: #252525;
             overflow-x: hidden;
             transition: background-color 0.3s;
+        }
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
         .page {
             opacity: 0;
@@ -90,7 +124,7 @@
             cursor: pointer;
         }
         .nav-item.active {
-            background-color: #769656;
+            background-color: #a5d296;
             color: #252525;
             font-weight: 600;
             border: 1px solid #5ca05c;
@@ -121,11 +155,13 @@
             color: #252525;
             margin-bottom: 8px;
             line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
         }
         .home-subtitle {
             font-size: 1.5rem;
-            color: #769656;
+            color: #5ac05c;
             font-weight: 500;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
         }
         .announcements-container {
             display: flex;
@@ -165,7 +201,7 @@
             display: inline-block;
             width: 8px;
             height: 8px;
-            background-color: #769656;
+            background-color: #a5d296;
             border-radius: 50%;
             margin-right: 8px;
         }
@@ -188,6 +224,7 @@
             text-align: center;
             color: #252525;
             margin-bottom: 48px;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
         }
         .works-page, .contact-page, .collaboration-page, .service-page {
             padding-top: 72px;
@@ -233,7 +270,7 @@
         .card-dot {
             width: 8px;
             height: 8px;
-            background-color: #769656;
+            background-color: #a5d296;
             border-radius: 50%;
         }
         .card-title {
@@ -259,7 +296,7 @@
         .card-list-bullet {
             width: 8px;
             height: 8px;
-            background-color: #769656;
+            background-color: #a5d296;
             border-radius: 50%;
             margin-right: 8px;
         }
@@ -320,7 +357,7 @@
             color: #252525;
         }
         .version-log {
-            color: #769656;
+            color: #a5d296;
             cursor: pointer;
             text-decoration: underline;
             display: inline-block;
@@ -496,7 +533,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #769656;
+            background-color: #a5d296;
             color: white;
             padding: 10px 20px;
             border-radius: 12px;
@@ -507,49 +544,117 @@
         .copy-notification.show {
             opacity: 1;
         }
+        
+        /* 动态渐变背景的额外样式 */
+        .dynamic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+        }
+        
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #a5d296 0%, #5ac05c 100%);
+            top: 10%;
+            left: 10%;
+            animation: float 25s ease-in-out infinite;
+        }
+        
+        .blob-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #5ac05c 0%, #ffffff 100%);
+            top: 60%;
+            right: 15%;
+            animation: float 30s ease-in-out infinite reverse;
+        }
+        
+        .blob-3 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ffffff 0%, #a5d296 100%);
+            bottom: 20%;
+            left: 20%;
+            animation: float 35s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, 50px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 30px) scale(0.9);
+            }
+            75% {
+                transform: translate(40px, -20px) scale(1.05);
+            }
+        }
     </style>
 </head>
+
 <body>
+    <!-- 动态渐变背景 -->
+    <div class="dynamic-background">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+    </div>
+    
     <nav class="sticky-nav">
         <div class="nav-container">
             <div class="nav-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="https://raw.bgithub.xyz/chess-brain/chess-brain.github.io/refs/heads/main/king.png" alt="Logo">
+                        <img src="https://chess-brain.github.io/king.png" alt="象棋脑工作室Logo">
                     </div>
-                    <span class="logo-text">象棋脑ChessBrain</span>
+                    <span class="logo-text">象棋脑工作室</span>
                 </div>
                 <div class="nav-links">
                     <div class="nav-item active" data-page="home">首页</div>
                     <div class="nav-item" data-page="works">精选</div>
-                    <div class="nav-item" data-page="webs">网页</div>
                     <div class="nav-item" data-page="service">工具</div>
                     <div class="nav-item" data-page="contact">联系方式</div>
-                    <div class="nav-item" data-page="collaboration">合作项目</div>
+                    <div class="nav-item" data-page="collaboration">合作</div>
                     <div class="nav-item" data-page="about">关于</div>
                 </div>
                 <div class="nav-actions">
                     <button class="mobile-menu-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <div id="randomEmoji"></div>
+                    <div id="randomEmoji" style="font-size: 1.5rem; margin-left: 8px; display: inline-block;">😍</div>
                 </div>
             </div>
         </div>
     </nav>
+    
     <main class="main-content">
         <div id="home" class="page home-page active">
             <div class="home-content">
-                <h1 class="home-title">欢迎来到象棋脑的官网</h1>
-                <p class="home-subtitle">一起创新吧！</p>
+                <h1 class="home-title">象棋脑工作室chess-brain</h1>
+                <p class="home-subtitle">和我们一起共创世界、科技创新吧！</p>
             </div>
             <div class="announcements-container">
                 <div class="announcement-card">
                     <h3 class="announcement-title">官方公告</h3>
                     <div class="announcement-content">
-                        <p>象棋脑ChessBrain坚决反对一切违规扩展、作品、开发者。坚决反对一切通过违规手段偷币、偷关注、偷点赞、偷收藏等违规行为。</p>
+                        <p>象棋脑工作室坚决反对一切违规扩展、作品、开发者。坚决反对一切通过违规手段偷币、偷关注、偷点赞、偷收藏等违规行为。</p>
                     </div>
                 </div>
                 <div class="activity-card">
@@ -560,9 +665,10 @@
                 </div>
             </div>
         </div>
+        
         <div id="works" class="page works-page" style="display: none;">
             <div class="cards-container">
-                <h2 class="section-title">象棋脑ChessBrain的精选作品</h2>
+                <h2 class="section-title">象棋脑工作室的精选作品</h2>
                 <div class="cards-grid">
                     <!-- Scratch 作品 -->
                     <div class="card">
@@ -575,23 +681,16 @@
                         <ul class="card-list">
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                (1)
+                                火柴人VS化学
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                (2)
-                            </li>
-                            <li class="card-list-item">
-                                <span class="card-list-bullet"></span>
-                                (3)
-                            </li>
-                            <li class="card-list-item">
-                                <span class="card-list-bullet"></span>
-                                (4)
+                                九·一八
                             </li>
                         </ul>
-                        <p class="card-note">请前往共创世界象棋脑ChessBrain的主页试玩作品</p>
+                        <p class="card-note">请前往共创世界象棋脑工作室的主页试玩作品</p>
                     </div>
+                    
                     <!-- 文章 -->
                     <div class="card">
                         <div class="card-header">
@@ -614,8 +713,9 @@
                                 小众的神应用分享
                             </li>
                         </ul>
-                        <p class="card-note">请前往 404 社区"文章"页面浏览</p>
+                        <p class="card-note">请前往共创世界一只数学柴的主页"文章"页面浏览</p>
                     </div>
+                    
                     <!-- 积木扩展 -->
                     <div class="card">
                         <div class="card-header">
@@ -627,15 +727,15 @@
                         <ul class="card-list">
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                高级交互弹窗
+                                各种交互弹窗
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                语音转文字
+                                安全保护组件
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                在线播放音乐
+                                成就与排行榜
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
@@ -647,103 +747,59 @@
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                发送系统消息
+                                各类数学运算
                             </li>
                             <li class="card-list-item">
                                 <span class="card-list-bullet"></span>
-                                Morgan的工具箱
+                                一只数学柴的工具箱
                             </li>
                         </ul>
-                        <p class="card-note">请在共创世界素材集市搜索"数学柴" 或 "象棋脑"</p>
+                        <p class="card-note">请在共创世界素材集市搜索"象棋脑工作室"或"一只数学柴"。也可访问“工具”页的扩展库</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="webs" class="page service-page" style="display: none;">
-            <div class="cards-container">
-                <h2 class="section-title">网站</h2>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="card-dot"></div>
-                            </div>
-                            <h3 class="card-title">象棋脑社区主页</h3>
-                        </div>
-                        <p class="card-note">象棋脑ChessBrain官网的社区主页</p>
-                        <a href="https://chess-brain.github.io/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">前往主页</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="card-dot"></div>
-                            </div>
-                            <h3 class="card-title">象棋脑的Scratch积木扩展开发教程</h3>
-                        </div>
-                        <p class="card-note">教你如何开发自己的Scratch积木扩展</p>
-                        <a href="https://chess-brain.github.io/teach/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">前往教程</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="card-dot"></div>
-                            </div>
-                            <h3 class="card-title">象棋脑工具箱</h3>
-                        </div>
-                        <p class="card-note">实用工具大集结</p>
-                        <a href="https://chess-brain.github.io/tools/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">实用工具</a>
-                    </div>
-                     <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="card-dot"></div>
-                            </div>
-                            <h3 class="card-title">象棋脑官网官方文库</h3>
-                        </div>
-                        <p class="card-note">官方文档和资源库</p>
-                        <a href="https://chess-brain.github.io/doc/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">访问文库</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div id="contact" class="page contact-page" style="display: none;">
             <div class="cards-container">
                 <h2 class="section-title">联系我们</h2>
                 <div class="contact-cards">
                     <div class="card single-card">
                         <h3 class="contact-title">官方 QQ 群</h3>
-                        <p class="contact-detail">群号：1070016203</p>
+                        <p class="contact-detail">群号：1004706370</p>
                     </div>
                     <div class="card single-card">
                         <h3 class="contact-title">官方客服</h3>
-                        <p class="contact-detail">公众号：（无）</p>
+                        <p class="contact-detail">等等，快了</p>
                     </div>
                     <div class="card single-card">
                         <h3 class="contact-title">GitHub 账号</h3>
                         <p class="contact-detail">账号名称：chess-brain</p>
                     </div>
                     <div class="card single-card">
-                        <h3 class="contact-title">邮箱地址</h3>
-                        <p class="contact-detail">3690985693@qq.com</p>
+                        <h3 class="contact-title">微信公众号</h3>
+                        <p class="contact-detail">象棋脑工作室</p>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div id="collaboration" class="page collaboration-page" style="display: none;">
             <div class="cards-container">
                 <h2 class="section-title">合作项目</h2>
                 <div class="contact-cards">
                     <div class="card single-card">
-                        <h3 class="contact-title">与象棋脑ChessBrain的合作</h3>
-                        <p class="contact-detail">请把你的想法发给官方客服，并请标注"合作"</p>
+                        <h3 class="contact-title">想和象棋脑工作室合作？</h3>
+                        <p class="contact-detail">申请入口https://chess-brain.mysxl.cn/</p>
                     </div>
                     <div class="card single-card">
-                        <h3 class="contact-title">404 社区文章投稿</h3>
-                        <p class="contact-detail">请将文章发送至微信公众号，第一行注明：404文章投稿+文章标题+社区账号+社区ID，第二行开始为正文，最后请附上该文章封面否则默认使用404社区的logo。审核通过且被发表的文章会在最后用卡片为该文章作者的账号打广告哦（ps：没有稿费）。文章主题不限。快来投稿吧！</p>
+                        <h3 class="contact-title">想加入象棋脑工作室？</h3>
+                        <p class="contact-detail">请加入象棋脑工作室官方1群，并联系群主（群号见联系方式）或访问申请链接https://chess-brain.mysxl.cn/</p>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div id="service" class="page service-page" style="display: none;">
             <div class="cards-container">
                 <h2 class="section-title">实用工具</h2>
@@ -760,88 +816,94 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">
                                 <div class="card-dot"></div>
                             </div>
-                            <h3 class="card-title">象棋脑的Scratch积木扩展开发教程</h3>
+                            <h3 class="card-title">象棋脑工作室的Scratch积木扩展开发教程</h3>
                         </div>
                         <p class="card-note">教你如何开发自己的Scratch积木扩展</p>
                         <a href="https://chess-brain.github.io/teach/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">前往教程</a>
                     </div>
+                    
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">
                                 <div class="card-dot"></div>
                             </div>
-                            <h3 class="card-title">象棋脑官网官方文库</h3>
+                            <h3 class="card-title">象棋脑工作室Scratch积木扩展库</h3>
                         </div>
-                        <p class="card-note">官方文档和资源库</p>
-                        <a href="https://kejicx.github.io/doc/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">访问文库</a>
+                        <p class="card-note">丰富、实用的积木扩展库</p>
+                        <a href="https://chess-brain.github.io/code/" target="_blank" class="service-btn encode-btn external-link" style="display: block; text-align: center; margin-top: 16px;">访问代码库</a>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div id="about" class="page about-page" style="display: none;">
             <div class="cards-container">
                 <h2 class="section-title">关于</h2>
                 <div class="contact-cards">
                     <div class="card single-card">
-                        <h3 class="contact-title">关于象棋脑社区</h3>
-                        <p class="contact-detail">创建时间：2025.11.1</p>
-                        <p class="contact-detail">室长：象棋脑ChessBrain</p>
+                        <h3 class="contact-title">关于象棋脑工作室</h3>
+                        <p class="contact-detail">创建时间：2023.5.4</p>
+                        <p class="contact-detail">室长：一只数学柴</p>
+                        <p class="contact-detail">人数：不知道，没数</p>
                     </div>
                     <div class="card single-card">
-                        <h3 class="contact-title">关于象棋脑ChessBrain</h3>
-                        <p class="contact-detail">住址：四川成都</p>
-                        <p class="contact-detail">星座：处女座</p>
-                        <p class="contact-detail">爱好：编程、数码、设计等</p>
-                    </div>
-                    <div class="card single-card">
-                        <h3 class="contact-title">致谢</h3>
-                        <p class="contact-detail">科技创新（https://kejicx.github.io）</p>
-                        <p class="contact-detail">Morgan（https://ccw.site/s/bLmQk9）</p>
+                        <h3 class="contact-title">关于一只数学柴</h3>
+                        <p class="contact-detail">住址：中华人民共和国浙江省杭州市</p>
+                        <p class="contact-detail">最喜欢的歌：日落（嗯对，太好听了）</p>
+                        <p class="contact-detail">爱好：编程、数码、设计、听燕姿的歌等</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    
     <footer>
         <div class="footer-content">
-            <p>© 2025 象棋脑ChessBrain官网. 保留所有权利.</p>
+            <p>© 2025 象棋脑工作室chess-brain. 保留所有权利.</p>
             <div class="footer-links">
-                <a href="https://ccw.site/s/KZ2GKj/" target="_blank" class="footer-link external-link">象棋脑的主页↗</a>
+                <a href="https://ccw.site/s/233J3" target="_blank" class="footer-link external-link">象棋脑工作室的共创主页↗</a>
+                <a href="https://ccw.site/s/bL4gnr" target="_blank" class="footer-link external-link">一只数学柴的共创主页↗</a>
             </div>
+            <div class="counter">该网页已被访问 
+                <img src="https://w.saobby.com/w/cbudl97s"> 次（自2025年10月12日起开始计算）</div>
             <div class="version-log" id="versionLog">版本更新日志</div>
         </div>
     </footer>
+    
     <!-- 液态玻璃弹窗 -->
     <div class="modal-overlay" id="versionModal">
         <div class="modal">
             <div class="modal-close" id="modalClose">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
                 </svg>
             </div>
             <h3 class="modal-title">版本更新日志</h3>
             <div class="modal-content">
-                <p>版本号：1.3</p>
+                <p>版本号：5.1</p>
                 <p>更新内容：修复了已知问题，优化了部分细节。</p>
             </div>
         </div>
     </div>
+    
     <!-- 跳转确认弹窗 -->
     <div class="modal-overlay" id="redirectModal">
         <div class="modal">
             <div class="modal-close" id="redirectModalClose">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
                 </svg>
             </div>
             <h3 class="modal-title">跳转确认</h3>
             <div class="modal-content">
-                <p>即将跳转至：<span id="redirectTarget"></span></p>
+                <p>即将跳转至：
+                    <span id="redirectTarget"></span></p>
             </div>
             <div class="service-buttons" style="margin-top: 24px;">
                 <button class="service-btn encode-btn" id="redirectConfirm">跳转</button>
@@ -849,7 +911,9 @@
             </div>
         </div>
     </div>
+    
     <div class="copy-notification" id="copyNotification">已复制到剪贴板</div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 页面切换
@@ -990,12 +1054,53 @@
             });
             // 随机表情符号
             const randomEmoji = document.getElementById('randomEmoji');
-            const welcomeEmojis = ['🤣', '😍', '🥰', '🥳', '🤩', '😎', '😋', '🙌', '🫶', '👍', '✌', '🫰', '🤟', '🤙', '🎊', '🎉', '🪄', '🎁', '🎈'];
+            const welcomeEmojis = ['🤣', '😍', '🥰', '🥳', '🤩', '😎', '😋', '🙌', '🫶', '👍', '✌', '🤓', '🤟', '🤙', '🎊', '🎉', '🪄', '🎁', '🎈'];
             const randomIndex = Math.floor(Math.random() * welcomeEmojis.length);
             randomEmoji.textContent = welcomeEmojis[randomIndex];
             randomEmoji.style.fontSize = '1.5rem';
             randomEmoji.style.marginLeft = '8px';
             randomEmoji.style.display = 'inline-block';
+            
+            // 动态生成随机渐变背景
+            function generateRandomGradient() {
+                const colors = ['#ffffff', '#a5d296', '#5ac05c'];
+                const gradientTypes = ['linear-gradient', 'radial-gradient'];
+                const gradientType = gradientTypes[Math.floor(Math.random() * gradientTypes.length)];
+                
+                let gradientString;
+                if (gradientType === 'linear-gradient') {
+                    const angle = Math.floor(Math.random() * 360);
+                    const color1 = colors[Math.floor(Math.random() * colors.length)];
+                    const color2 = colors[Math.floor(Math.random() * colors.length)];
+                    const color3 = colors[Math.floor(Math.random() * colors.length)];
+                    gradientString = `${gradientType}(${angle}deg, ${color1} 0%, ${color2} 50%, ${color3} 100%)`;
+                } else {
+                    const shape = Math.random() > 0.5 ? 'circle' : 'ellipse';
+                    const color1 = colors[Math.floor(Math.random() * colors.length)];
+                    const color2 = colors[Math.floor(Math.random() * colors.length)];
+                    gradientString = `${gradientType}(${shape} at ${Math.floor(Math.random() * 100)}% ${Math.floor(Math.random() * 100)}%, ${color1} 0%, ${color2} 100%)`;
+                }
+                
+                return gradientString;
+            }
+            
+            // 应用随机渐变背景
+            const dynamicBackground = document.querySelector('.dynamic-background');
+            if (dynamicBackground) {
+                // 随机调整渐变斑点的位置和大小
+                const blobs = document.querySelectorAll('.gradient-blob');
+                blobs.forEach(blob => {
+                    const size = Math.floor(Math.random() * 200) + 150;
+                    blob.style.width = `${size}px`;
+                    blob.style.height = `${size}px`;
+                    blob.style.top = `${Math.floor(Math.random() * 80)}%`;
+                    blob.style.left = `${Math.floor(Math.random() * 80)}%`;
+                    
+                    // 随机动画持续时间
+                    const duration = Math.floor(Math.random() * 20) + 20;
+                    blob.style.animationDuration = `${duration}s`;
+                });
+            }
             
             // 初始页面显示
             setTimeout(() => {
@@ -1005,4 +1110,3 @@
     </script>
 </body>
 </html>
-
